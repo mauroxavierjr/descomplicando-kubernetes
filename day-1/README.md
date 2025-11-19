@@ -1,16 +1,16 @@
 # Descomplicando o Kubernetes - Day 01
-
+&nbsp;
 ## Criação do cluster Kind:
 $ kind create cluster --name kind-giropops --config kind-cluster.yaml
-
+&nbsp;
 ## Criação de um pod template utilizando dry-run:
 $ kubectl run meu-nginx --image nginx --dry-run=client -oyaml > pod-template-dryrun.yaml
-
+&nbsp;
 ## Criando pod através de um manifest yaml:
 $ kubectl apply -f meu-primeiro-pod-working.yaml
-
-# Erros do arquivo meu-primeiro-pod-failed.yaml
-
+&nbsp;
+## Erros do arquivo meu-primeiro-pod-failed.yaml:
+&nbsp;
 ```
 # The correct api version is v1 for pods resource in this cluster
 apiVersion: v1
@@ -40,3 +40,4 @@ spec:
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 ```
+&nbsp;

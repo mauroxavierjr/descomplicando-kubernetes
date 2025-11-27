@@ -29,8 +29,7 @@ nodes:
 &nbsp;
 Arquivo Manifest: nginx-volume-shared-emptydir.yaml
 &nbsp;
-Objetivo:
-O manifesto anexo é testar a criação de um pod contendo dois containers.
+Objetivo: O manifesto anexo é testar a criação de um pod contendo dois containers.
 &nbsp;
 01) Container com imagem Alpine responsável por configurar o arquivo index.html no volume compartilhado com o texto "Pod is Working!"
 02) Conteiner com imagem do Nginx que vai montar o caminho do index.html no volume compartilhado. Isso vai permitir que o web server utilize a página html customizada.
@@ -123,8 +122,7 @@ OK: 12 MiB in 25 packages
 &nbsp;
 Arquivo Manifest: stress-test.yaml
 &nbsp;
-Objetivo:
-Criar um pod com uma definição de limite de recursos e realizar um teste de stress para verificar o comportamento após uma tentativa de ultrapassar o limite permitido de utilização de recursos.
+Objetivo: Criar um pod com uma definição de limite de recursos e realizar um teste de stress para verificar o comportamento após uma tentativa de ultrapassar o limite permitido de utilização de recursos.
 &nbsp;
 ```yaml
 apiVersion: v1

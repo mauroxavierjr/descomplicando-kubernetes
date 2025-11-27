@@ -10,6 +10,20 @@ Criando Cluster kind:
 kind create cluster --config kind-cluster-creation.yaml --name desafio2
 ```
 &nbsp;
+Kind cluster yaml:
+```yaml
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+- role: worker
+```
+&nbsp;
+&nbsp;
+-------------------------------------------------------------------------------------------------------------------
+&nbsp;
 &nbsp;
 ### Testes do emptyDir
 &nbsp;

@@ -1,2 +1,3 @@
-# descomplicando-kubernetes
-Repositório de arquivos utilizados durante o estudo de Kubernetes
+# Mauro Xavier - Descomplicando-Kubernetes
+
+Repositório utilizado em treinamento de Kubernetes.

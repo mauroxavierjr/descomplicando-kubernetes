@@ -28,10 +28,12 @@ nodes:
 ### Testes do emptyDir
 &nbsp;
 Objetivo: O manifesto anexo é testar a criação de um pod contendo dois containers.
-Arquivo Manifest: nginx-volume-shared-emptydir.yaml.
 &nbsp;
 01) Container com imagem Alpine responsável por configurar o arquivo index.html no volume compartilhado com o texto "Pod is Working!"
 02) Conteiner com imagem do Nginx que vai montar o caminho do index.html no volume compartilhado. Isso vai permitir que o web server utilize a página html customizada.
+&nbsp;
+&nbsp;
+Arquivo Manifest: nginx-volume-shared-emptydir.yaml.
 &nbsp;
 ```yaml
 apiVersion: v1

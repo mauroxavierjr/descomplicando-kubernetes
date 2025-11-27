@@ -27,7 +27,7 @@ nodes:
 &nbsp;
 ### Testes do emptyDir
 &nbsp;
-Arquivo Manifest: nginx-volume-shared-emptydir.yaml
+Arquivo Manifest: nginx-volume-shared-emptydir.yaml.
 &nbsp;
 Objetivo: O manifesto anexo é testar a criação de um pod contendo dois containers.
 &nbsp;
@@ -120,7 +120,7 @@ OK: 12 MiB in 25 packages
 &nbsp;
 ### Testes com limitação de recursos
 &nbsp;
-Arquivo Manifest: stress-test.yaml
+Arquivo Manifest: stress-test.yaml.
 &nbsp;
 Objetivo: Criar um pod com uma definição de limite de recursos e realizar um teste de stress para verificar o comportamento após uma tentativa de ultrapassar o limite permitido de utilização de recursos.
 &nbsp;

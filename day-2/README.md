@@ -33,7 +33,7 @@ Objetivo: O manifesto anexo é testar a criação de um pod contendo dois contai
 02) Conteiner com imagem do Nginx que vai montar o caminho do index.html no volume compartilhado. Isso vai permitir que o web server utilize a página html customizada.
 &nbsp;
 &nbsp;
-Arquivo Manifest: nginx-volume-shared-emptydir.yaml.
+Manifesto: nginx-volume-shared-emptydir.yaml
 &nbsp;
 ```yaml
 apiVersion: v1

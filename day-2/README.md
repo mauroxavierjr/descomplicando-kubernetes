@@ -27,8 +27,6 @@ nodes:
 &nbsp;
 ### Testes do emptyDir
 &nbsp;
-Arquivo Manifest: nginx-volume-shared-emptydir.yaml.
-&nbsp;
 Objetivo: O manifesto anexo é testar a criação de um pod contendo dois containers.
 &nbsp;
 Arquivo Manifest: nginx-volume-shared-emptydir.yaml.

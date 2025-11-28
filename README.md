@@ -1,4 +1,3 @@
-&nbsp;
 ## Resumo
 Este repositório reúne meus arquivos e exercícios utilizados durante o estudo de Kubernetes. O objetivo é manter um conjunto organizado de manifests, anotações e pequenos experimentos que ajudem a revisar conceitos essenciais do ecossistema Kubernetes.
 &nbsp;

@@ -1,5 +1,6 @@
 # Descomplicando o Kubernetes - DAY-2 - Desafio
 &nbsp;
+-------------------------------------------------------------------------------------------------------------------
 ## 1 - Pré-Requisitos
 &nbsp;
 Criando Cluster kind:

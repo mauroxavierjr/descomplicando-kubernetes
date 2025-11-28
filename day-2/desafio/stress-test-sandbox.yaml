@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: stress-test
+  name: stress-test-sandbox
   labels:
-    app: stress
+    app: stress-test-sandbox
 spec:
   containers:
   - name: ubuntu

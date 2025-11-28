@@ -1,6 +1,5 @@
 # Descomplicando o Kubernetes - DAY-2 - Desafio
 &nbsp;
-&nbsp;
 ## 1 - Pré-Requisitos
 &nbsp;
 Criando Cluster kind:
@@ -21,8 +20,6 @@ nodes:
 &nbsp;
 &nbsp;
 -------------------------------------------------------------------------------------------------------------------
-&nbsp;
-&nbsp;
 ## 2 - Testes do emptyDir
 &nbsp;
 Objetivo: O manifesto anexo é testar a criação de um pod contendo dois containers.
@@ -114,8 +111,6 @@ OK: 12 MiB in 25 packages
 &nbsp;
 &nbsp;
 -------------------------------------------------------------------------------------------------------------------
-&nbsp;
-&nbsp;
 ## 3 - Testes com limitação de recursos
 &nbsp;
 Objetivo: Criar um pod com uma definição de limite de recursos e realizar um teste de stress para verificar o comportamento após uma tentativa de ultrapassar o limite permitido de utilização de recursos. Para esse cenário vou utilizar dois tipos de manifestos diferentes:

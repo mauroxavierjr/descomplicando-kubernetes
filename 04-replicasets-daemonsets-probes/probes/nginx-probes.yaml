@@ -38,7 +38,7 @@ spec:
           failureThreshold: 3
         readinessProbe:
           httpGet:
-            path: /meusite
+            path: /
             port: 80
           initialDelaySeconds: 10
           periodSeconds: 10     
@@ -47,7 +47,7 @@ spec:
           failureThreshold: 3
         startupProbe:
           tcpSocket:
-            port: 99
+            port: 80
           initialDelaySeconds: 10
           periodSeconds: 10
           timeoutSeconds: 5

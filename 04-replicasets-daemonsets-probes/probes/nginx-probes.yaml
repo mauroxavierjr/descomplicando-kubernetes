@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: probes-test
+  name: nginx-probes
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: probes-test
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: probes-test
+    spec: 
+      containers:
+      - image: nginx:latest
+        name: nginx
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+        livenessProbe:
+          exec:
+            command:
+            - curl
+            - -f
+            - http://localhost:80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /meusite
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10     
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3
+        startupProbe:
+          tcpSocket:
+            port: 99
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3

@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: memory-eater-comprobes
+  labels:
+    app: memory-eater-comprobes
+    scenario: comprobes
+spec:
+  containers:
+  - name: app
+    image: linuxtips/memory-eater:0.3
+    resources:
+      requests:
+        memory: "128Mi"
+        cpu: "250m"
+      limits:
+        memory: "256Mi"
+        cpu: "500m"
+    livenessProbe:
+      httpGet:
+        path: /livez
+        port: 8080
+      initialDelaySeconds: 10
+      periodSeconds: 5
+      failureThreshold: 3
+    readinessProbe:
+      httpGet: 
+        path: /readyz
+        port: 8080
+      initialDelaySeconds: 10
+      periodSeconds: 5
+      failureThreshold: 3
+    startupProbe:
+      httpGet: 
+        path: /startupz
+        port: 8080
+      initialDelaySeconds: 10
+      periodSeconds: 5
+      failureThreshold: 3
+  restartPolicy: Always

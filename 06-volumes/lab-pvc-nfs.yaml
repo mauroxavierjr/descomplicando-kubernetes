@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: lab-pvc-nfs
+spec:
+  accessModes: # modo de acesso ao volume
+    - ReadWriteOnce # modo de acesso RWO, ou seja, somente leitura e escrita por um nó
+  resources:
+    requests: # solicitação de recursos
+      storage: 1Gi # tamanho do volume que ele vai solicitar
+  storageClassName: lab-sc-nfs # nome da classe de armazenamento que será utilizada
+#  selector: # seletor de labels
+#    matchLabels: # labels que serão utilizadas para selecionar o PV
+#      storage: nfs # label que será utilizada para selecionar o PV

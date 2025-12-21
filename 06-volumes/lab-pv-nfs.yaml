@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: lab-pv-nfs
+  labels:
+    storage: nfs # Label que será utilizada para identificar o PV
+spec: # Especificações do nosso PV
+  capacity: # Capacidade do PV
+    storage: 1Gi # 1 Gigabyte de armazenamento
+  accessModes: # Modos de acesso ao PV
+    - ReadWriteOnce # Modo de acesso ReadWriteOnce, ou seja, o PV pode ser montado como leitura e escrita por um único nó
+  persistentVolumeReclaimPolicy: Retain # Política de reivindicação do PV, ou seja, o PV não será excluído quando o PVC for excluído
+  nfs: # Tipo de armazenamento que vamos utilizar, no caso o NFS
+    server: 192.168.15.241 # Endereço do servidor NFS
+    path: "/mnt/nfs" # Compartilhamento do servidor NFS
+  storageClassName: lab-sc-nfs # Nome da classe de armazenamento que será utilizada

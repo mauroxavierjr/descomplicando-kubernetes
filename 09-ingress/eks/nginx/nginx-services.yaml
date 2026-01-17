@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-001
+  labels:
+    app: nginx-001
+spec:
+  selector:
+    app: nginx-001
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      name: tcp-app
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-002
+  labels:
+    app: nginx-002
+spec:
+  selector:
+    app: nginx-002
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+      name: tcp-app
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-003
+  labels:
+    app: nginx-003
+spec:
+  selector:
+    app: nginx-003
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 80
+      name: tcp-app
+  type: ClusterIP

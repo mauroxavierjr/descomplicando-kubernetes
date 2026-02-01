@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-002
+  labels:
+    app: nginx-002
+spec:
+  selector:
+    app: nginx-002
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      name: tcp-app
+  type: ClusterIP

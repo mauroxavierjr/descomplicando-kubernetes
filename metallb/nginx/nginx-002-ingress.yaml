@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: nginx-002
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: nginx002.mxjrlab.com.br
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: nginx-002
+            port:
+              number: 80

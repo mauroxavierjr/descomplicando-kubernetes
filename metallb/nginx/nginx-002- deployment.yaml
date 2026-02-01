@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-002
+  name: nginx-002
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-002
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: nginx-002
+    spec:
+      volumes:
+      - name: shared-volume
+        emptyDir:
+          sizeLimit: 256Mi
+      containers:
+      - name: change-index-html
+        image: alpine:latest
+        args:
+          - sh
+          - -c
+          - echo '<h1>Eu sou o Nginx 002!</h1>' > /usr/share/nginx/html/index.html; sleep 36000
+        volumeMounts:
+        - name: shared-volume
+          mountPath: /usr/share/nginx/html
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "0.3"
+          requests:
+            memory: "64Mi"
+            cpu: "0.1"
+      - name: nginx
+        image: nginx:latest
+        volumeMounts:
+        - name: shared-volume
+          mountPath: /usr/share/nginx/html
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "0.3"
+          requests:
+            memory: "64Mi"
+            cpu: "0.1"

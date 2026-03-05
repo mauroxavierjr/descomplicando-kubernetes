@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: exemplo-pod-teste4
+  namespace: teste4
+spec:
+  containers:
+  - name: exemplo-container-teste4
+    image: cgr.dev/chainguard/nginx:latest
+    # image: nginx:latest

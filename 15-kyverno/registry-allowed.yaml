@@ -1,0 +1,18 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: ensure-image-from-trusted-registry
+spec:
+  validationFailureAction: Enforce
+  rules:
+  - name: ensure-image-from-trusted-registry
+    match:
+      resources:
+        kinds:
+        - Pod
+    validate:
+      message: "All container images must be pulled from the trusted registry 'cgr.dev/chainguard/*'."
+      pattern:
+        spec:
+          containers:
+          - image: "cgr.dev/chainguard/*"

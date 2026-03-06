@@ -1,1 +1,1 @@
-<img src="images/kyverno.png" alt="Kyverno" width="500">
+![Descrição da imagem](images/kyverno.png)

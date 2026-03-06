@@ -1,1 +1,1 @@
-![Descrição da imagem](images/taint-tolerations-affinity.png)
+![Descrição da imagem](taint-tolerations-affinity.png)

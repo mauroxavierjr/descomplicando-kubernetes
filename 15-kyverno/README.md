@@ -1,1 +1,1 @@
-![Descrição da imagem](images/kyverno.png)
+![Descrição da imagem](kyverno.png)

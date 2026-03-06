@@ -1,1 +1,1 @@
-<img src="images/taint-tolerations-affinity.png.png">
+<img src="images/taint-tolerations-affinity.png.png" alt="Taints, Tolerations e Affinities" width="500">

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx-antiaffinity
+  name: nginx-antiaffinity
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx-antiaffinity
+  template:
+    metadata:
+      labels:
+        app: nginx-antiaffinity
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - nginx-antiaffinity
+            topologyKey: "datacenter"

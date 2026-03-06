@@ -1,0 +1,1 @@
+<img src="images/taint-tolerations-affinity.png.png">

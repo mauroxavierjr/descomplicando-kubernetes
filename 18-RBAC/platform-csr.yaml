@@ -1,0 +1,10 @@
+apiVersion: certificates.k8s.io/v1
+kind: CertificateSigningRequest
+metadata:
+  name: platform
+spec:
+  request: {CERTIFICATE_REQUEST_BASE64}
+  signerName: kubernetes.io/kube-apiserver-client # Name of the signer that should sign this request
+  expirationSeconds: 31536000 # 1 year
+  usages:
+  - client auth # The intended usage of the key. In this case, it is for client authentication.

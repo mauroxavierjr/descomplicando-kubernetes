@@ -1,0 +1,1 @@
+![Resumo RBAC](rbac.png)
